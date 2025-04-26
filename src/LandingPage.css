@@ -1,0 +1,150 @@
+body {
+  background-image: url('/Background_image3.jpeg');
+  background-size: cover; /* Changed from cover to contain */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.landing-page {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  color: #2c3e50;
+}
+
+.landing-header {
+  margin-top: 60px;
+  background-color: #f6f3dd;
+  border-radius: 5px;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.landing-header h1 {
+  color: #ba6e27;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #2c3e50;
+  animation: typing 4s steps(17, end), blink-caret 0.5s step-end 8; /* Stops blinking after 8 iterations */
+  width: 450px; /* Set a fixed width */
+  margin: 0 auto; /* Center the text */
+  text-align: center; /* Ensure text alignment */
+}
+
+.landing-header p {
+  color: #7f8c8d;
+}
+
+.start-shopping-button,
+.login-button {
+  background-color: rgb(37, 138, 197);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.features {
+  background-color: #f6f3dd;
+  margin: 20px 0;
+  padding: 100px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  /* Added box-shadow for a subtle effect */
+
+}
+
+.features h2 {
+  color: #5283b5;
+    padding-bottom: 30px; /* Added padding for spacing */
+
+}
+
+.features ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.features li {
+  margin: 10px 0;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Added separation */
+  padding-bottom: 10px; /* Added padding for spacing */
+  padding-top: 10px; /* Added padding for spacing */
+  opacity: 0; /* Start hidden */
+  animation: fadeIn 0.5s ease-in forwards;
+  animation-delay: calc(var(--li-index) * 0.3s); /* Delay based on index */
+}
+
+.features li:nth-child(1) { --li-index: 0; }
+.features li:nth-child(2) { --li-index: 1; }
+.features li:nth-child(3) { --li-index: 2; }
+.features li:nth-child(4) { --li-index: 3; }
+.features li:nth-child(5) { --li-index: 4; }
+.features li:nth-child(6) { --li-index: 5; }
+.features li:nth-child(7) { --li-index: 6; }
+.features li:nth-child(8) { --li-index: 7; }
+/* Add more nth-child rules if there are more list items */
+
+.features li strong {
+  color: #14477b;
+}
+
+.landing-footer {
+  background-color: #f6f3dd;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid #ddd;
+}
+
+.landing-footer p {
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 22ch; /* Match the number of characters in the text */
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #2c3e50;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* Slight upward movement */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
