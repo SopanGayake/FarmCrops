@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import VerticalPanel from './Vertical_Panel';
-import About from './About';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import VerticalPanel from "./Vertical_Panel";
+import About from "./About";
 
 export default function Navbar(props) {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
@@ -18,35 +18,51 @@ export default function Navbar(props) {
   return (
     <>
       <nav className="navbar navbar-expand-lg custom-navbar fixed-top">
-        <div className="container-fluid custom-container">
-          <img
-            src="/options_button.jpg"
-            alt="Option Button"
-            className="option-button"
-            onMouseEnter={(e) => (e.target.style.transform = 'scale(1.1)')}
-            onMouseLeave={(e) => (e.target.style.transform = 'scale(1.0)')}
-            onClick={togglePanel}
-          />
-          <a className="navbar-brand custom-brand" href="/">
+        <div
+          style={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "space-between",
+            alignContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              alignContent: "center",
+              alignItems: "center",
+            }}
+          >
             <img
               src="/FARM_CROPS9.png"
               alt="FarmCrops Logo"
               className="farm-logo rounded-circle"
-              onMouseEnter={(e) => (e.target.style.transform = 'scale(1.1)')}
-              onMouseLeave={(e) => (e.target.style.transform = 'scale(1.0)')}
+              onMouseEnter={(e) => (e.target.style.transform = "scale(1.1)")}
+              onMouseLeave={(e) => (e.target.style.transform = "scale(1.0)")}
             />
-          </a>
-          <div className="collapse navbar-collapse right-navbar-options">
-            <ul className="navbar-nav custom-nav">
+            <img
+              src="/options_button.jpg"
+              alt="Option Button"
+              className="option-button"
+              onMouseEnter={(e) => (e.target.style.transform = "scale(1.1)")}
+              onMouseLeave={(e) => (e.target.style.transform = "scale(1.0)")}
+              onClick={togglePanel}
+            />
+            <div className="navbar-nav custom-nav-right">
               <li className="nav-item">
                 <a
                   className="nav-link active custom-link"
                   aria-current="page"
                   href="/"
-                  onMouseEnter={(e) => (e.target.style.transform = 'scale(1.1)')}
-                  onMouseLeave={(e) => (e.target.style.transform = 'scale(1.0)')}
+                  onMouseEnter={(e) =>
+                    (e.target.style.transform = "scale(1.1)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.target.style.transform = "scale(1.0)")
+                  }
                 >
-                  <b style={{ color: '#ba6e27' }}>{props.dashboardText}</b>
+                  <b style={{ color: "#ba6e27" }}>{props.dashboardText}</b>
                 </a>
               </li>
               <li className="nav-item">
@@ -62,49 +78,104 @@ export default function Navbar(props) {
                 </a>
               </li>
               <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="/"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
                   {props.dropdownText || "Dropdown"}
                 </a>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="/">Your Location</a></li>
-                  <li><hr className="dropdown-divider" /></li>
-                  <li><a className="dropdown-item" href="/">Pune</a></li>
-                  <li><a className="dropdown-item" href="/">Mumbai</a></li>
-                  <li><a className="dropdown-item" href="/">Nashik</a></li>
-                  <li><a className="dropdown-item" href="/">Nagpur</a></li>
+                  <li>
+                    <a className="dropdown-item" href="/">
+                      Your Location
+                    </a>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/">
+                      Pune
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/">
+                      Mumbai
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/">
+                      Nashik
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/">
+                      Nagpur
+                    </a>
+                  </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled" href="/" tabIndex="-1" aria-disabled="true">{props.CartText}</a>
+                <a
+                  className="nav-link disabled"
+                  href="/"
+                  tabIndex="-1"
+                  aria-disabled="true"
+                >
+                  {props.CartText}
+                </a>
               </li>
-            </ul>
+            </div>
           </div>
-
-          <div className="collapse navbar-collapse left-navbar-options">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <form className="d-flex" role="search">
-                  <input className="form-control me-2 custom-search-input" type="search" placeholder="Search" aria-label="Search" />
+          <div className="left-navbar-options">
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                width: "100%",
+              }}
+            >
+              <div className="navbar-nav custom-nav-left">
+                <li className="nav-item">
+                  <form className="d-flex" role="search">
+                    <input
+                      className="form-control me-2 custom-search-input"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <img
+                      src="/Search_icon2.png"
+                      alt="Search Icon"
+                      className="search-icon"
+                      onMouseEnter={(e) =>
+                        (e.target.style.transform = "scale(1.1)")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.target.style.transform = "scale(1.0)")
+                      }
+                      onClick={() => console.log("Search icon clicked")}
+                    />
+                  </form>
+                </li>
+                <li className="nav-item">
                   <img
-                    src="/Search_icon2.png"
-                    alt="Search Icon"
-                    className="search-icon"
-                    onMouseEnter={(e) => (e.target.style.transform = 'scale(1.1)')}
-                    onMouseLeave={(e) => (e.target.style.transform = 'scale(1.0)')}
-                    onClick={() => console.log('Search icon clicked')}
+                    src={props.profileImage || "/Profile_icon5.jpg"}
+                    alt="Profile"
+                    className="profile-icon rounded-circle"
+                    onMouseEnter={(e) =>
+                      (e.target.style.transform = "scale(1.1)")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.transform = "scale(1.0)")
+                    }
                   />
-                </form>
-              </li>
-              <li className="nav-item">
-                <img
-                  src={props.profileImage || "/Profile_icon5.jpg"}
-                  alt="Profile"
-                  className="profile-icon rounded-circle"
-                  onMouseEnter={(e) => (e.target.style.transform = 'scale(1.1)')}
-                  onMouseLeave={(e) => (e.target.style.transform = 'scale(1.0)')}
-                />
-              </li>
-            </ul>
+                </li>
+              </div>
+            </div>
           </div>
         </div>
       </nav>

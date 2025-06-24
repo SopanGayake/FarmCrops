@@ -8,13 +8,13 @@ export default function VerticalPanel({ isOpen, onClose }) {
     <div
       style={{
         position: 'fixed',
-        top: '60px', // Adjusted to appear below the Navbar
+        top: '38px', // Start below the NavBar
         left: '0',
-        width: '250px',
-        height: '100%',
+        width: '200px',
+        height: 'calc(100% - 20px)', // Adjust height to account for the NavBar height
         backgroundColor: '#f8f9fa',
         boxShadow: '2px 0 5px rgba(0,0,0,0.1)',
-        zIndex: '1050',
+        zIndex: '1029', // Lower zIndex to ensure it hides behind the NavBar
         padding: '20px',
         display: 'flex',
         flexDirection: 'column',

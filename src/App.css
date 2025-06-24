@@ -3,15 +3,14 @@
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 100vmin;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   background-color: #282c34;
@@ -36,55 +35,51 @@
     transform: rotate(360deg);
   }
 }
-
-/* Override the default Bootstrap styles for .dropdown-toggle::after */
 .navbar .dropdown-toggle::after {
   display: inline-block;
-  margin-right: 0.255em; /* Adjust as needed */
-  vertical-align: 0.155em !important; /* Use !important to ensure it overrides Bootstrap */
+  margin-right: 0.255em;
 }
-
-/* Add any other custom styles here */
-
+.custom-container {
+  padding: 0px; 
+  
+}
 .custom-navbar {
   background-color: #98d7af;
-  min-height: 0px;
   padding: 5px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-.custom-container {
-  min-height: 40px;
 }
 
 .option-button {
   width: 35px;
   height: 35px;
   cursor: pointer;
+  justify-content: flex-start;
   transition: transform 0.3s;
 }
 
 .custom-brand {
   display: flex;
   align-items: center;
+  margin: 0 auto; /* Ensure it is centered between elements */
+  padding: 0; /* Remove unnecessary padding */
 }
 
 .farm-logo {
   width: 40px;
   height: 40px;
-  display: block;
+  margin-right: 20px;
   transition: transform 0.3s;
 }
 
-.right-navbar-options {
-  justify-content: flex-start;
-  margin-left: 10px;
+.custom-nav-right {
+  padding: 5px;
+  margin-right: auto;
 }
 
-.custom-nav {
-  padding: 5px;
-  min-height: 30px;
+.custom-nav-left {
+  padding: 5px; /* Retain the existing padding */
+  margin-left: auto; /* Push the element to the end of the navbar */
 }
 
 .custom-link {
@@ -93,21 +88,19 @@
 }
 
 .left-navbar-options {
-  justify-content: flex-end;
+  display: flex;
+  align-items: center;
 }
 
 .custom-search-input {
   margin-right: 8px;
   border-width: 2px;
-  min-height: 10px;
-  padding: 5px 20px;
+  padding: 5px;
 }
 
 .search-icon {
-  padding: 2px 2px;
   width: 30px;
   height: 30px;
-  margin-top: 4px;
   cursor: pointer;
   transition: transform 0.3s;
 }
@@ -116,11 +109,8 @@
   width: 40px;
   height: 40px;
   margin-left: 10px;
-  transform: scale(1.0);
   padding: 1px;
-  border-color: gray;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid gray;
   transition: transform 0.3s;
 }
 
@@ -154,3 +144,6 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
+
+
+

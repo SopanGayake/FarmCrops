@@ -1,17 +1,23 @@
-import React from 'react';
-import './App.css';
-import About from './components/About';
-import Navbar from './components/Navbar';
-import TermPolicies from './components/Term&Policies';
-import TextForm from './components/TextForm';
-import Dashboard from './components/Dashboard';
-import LandingPage from './components/LandingPage';
-import ResistrationForm from './components/ResistrationForm'; // Added import
+import React from "react";
+import "./App.css";
+import About from "./components/About";
+import Navbar from "./components/Navbar";
+import TermPolicies from "./components/Term&Policies";
+import TextForm from "./components/TextForm";
+import Dashboard from "./components/Dashboard";
+import LandingPage from "./components/LandingPage";
+import ResistrationForm from "./components/ResistrationForm"; // Added import
 
 function App() {
   return (
     <>
-      <Navbar title="FarmCrops" aboutText="About us" dropdownText="Location" dashboardText="Home" CartText="Your order" />
+      <Navbar
+        title="FarmCrops"
+        aboutText="About us"
+        dropdownText="Location"
+        dashboardText="Home"
+        CartText="Your order"
+      />
       {/* <div className="container my-4">
         <TextForm heading="Fill this registration form" Textarea="Description" />
       </div>
@@ -19,7 +25,11 @@ function App() {
       <About />
       <TermPolicies /> */}
       <div>
-      <LandingPage />
+        <LandingPage />
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <h1>roshan</h1>
+          <h1>bagde</h1>
+        </div>
       </div>
     </>
   );

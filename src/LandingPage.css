@@ -21,19 +21,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px;
+  /* padding: 30px; */
 }
 
-.landing-header h1 {
+/* .landing-header h1 {
   color: #ba6e27;
   overflow: hidden;
   white-space: nowrap;
   border-right: 3px solid #2c3e50;
-  animation: typing 4s steps(17, end), blink-caret 0.5s step-end 8; /* Stops blinking after 8 iterations */
-  width: 450px; /* Set a fixed width */
-  margin: 0 auto; /* Center the text */
-  text-align: center; /* Ensure text alignment */
-}
+  animation: typing 4s steps(17, end), blink-caret 0.5s step-end 8; Stops blinking after 8 iterations;
+  width: 450px; 
+  margin: 0 auto; 
+  text-align: center; 
+} */
 
 .landing-header p {
   color: #7f8c8d;
